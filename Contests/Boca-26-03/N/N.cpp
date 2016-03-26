@@ -3,40 +3,35 @@ using namespace std;
 
 int main(){
 
-vector<vector<int> > v, w, r;
+int teste, dim;
 
-int test, dim, el1, el2;
+cin >> teste;
 
-cin >> test;
-
-for (int i = 0; i < test; i++) {
+for (int j = 0; j < teste; j++) {
+  int r = 0;
   cin >> dim;
-  for (int j = 0; j < dim; j++) {
-    cin >> v[i][j];
+  int v[dim], w[dim];
+  for (int i = 0; i < dim; i++){
+     cin >> v[i];
   }
-  for (int k = 0; k < dim; k++) {
-    cin >> w[i][k];
+
+  for (int i = 0; i < dim; i++){
+     cin >> w[i];
   }
-  for (int l = 0; l < dim; l++) {
-    r[i][l] = v[i][l] * w[i][l];
+
+  for (int i = 0; i < dim; i++) {
+    r += w[i] * v[i];
+  }
+  if (r == 0){
+    cout << "Caso #" << j+1 << ": " << "reto" << endl;
+  }
+  else if (r > 0){
+    cout << "Caso #" << j+1 << ": " << "agudo" << endl;
+  }
+  else {
+    cout << "Caso #" << j+1 << ": " << "obtuso" << endl;
   }
 }
-
-for (int i = 0; i < test; i++){
-  for (int j = 0; j < dim; j++){
-    cout << v[i][j] << " ";
-  }
-  cout << endl;
-  for (int j = 0; j < dim; j++){
-    cout << w[i][j] << " ";
-  }
-  cout << endl;
-  for (int j = 0; j < dim; j++){
-    cout << r[i][j] << " ";
-  }
-  cout << endl;
-}
-
 
 return 0;
 }
