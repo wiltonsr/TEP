@@ -18,6 +18,8 @@ if (t%5 == 0){
 if (t%12 == 0){
   cout << "Reavaliacao" << endl;
 }
+else
+  cout << "" << endl;
 
 return 0;
 }
