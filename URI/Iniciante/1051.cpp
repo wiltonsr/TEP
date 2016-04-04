@@ -11,17 +11,18 @@ int main(){
 		cout << "Isento" << endl;
 	}
 	else if ((s >= 2000.01) && (s <= 3000.00)){	
-		cout << fixed << (s - 2000.00) * 0.08 << endl;
+		cout.precision(2);
+		cout << "R$ " << fixed << (s - 2000.00) * 0.08 << endl;
 	}
 	else if ((s >= 3000.01) && (s <= 4500.00)){
 		a = s - 3000.00;
 		cout.precision(2);
-		cout << fixed << (80.00)+(a*0.18) << endl;
+		cout << "R$ " << fixed << (80.00)+(a*0.18) << endl;
 	}
 	else {
 		b = s - 4500.00;
 		cout.precision(2);
-		cout << fixed << (350.00)+(b*0.28) << endl;
+		cout << "R$ " << fixed << (350.00)+(b*0.28) << endl;
 	}
 
 
